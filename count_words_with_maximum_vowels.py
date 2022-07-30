@@ -1,16 +1,13 @@
-n=input()
-l=n.split()
-d=[]
-s='AEIOUaeiou'
-for i in l:
+n=input().lower()
+s=n.split()
+v="aeiou"
+l=[]
+for i in s:
     c=0
     for j in i:
-        if j in s:
+        
+        if j in v:
             c+=1
-    d.append(c)
-e=[]
-for i in d:
-    if i == min(d):
-         e.append(i)
-print(len(e))          
-         
+    l.append(c)
+g=l.count(min(l))
+print(g)        
